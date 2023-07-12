@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #fe2b06;
+    --primaryColorLight: #fa7046;
+    --secondaryColor: #07fa0f;
+    --textColor: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    padding: 0 2rem;
+    height: 10vh;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#navbar li {
+   list-style-type: none;
+   margin: 0 1.3rem;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar a:hover,
+nav a#active {
+    color: var(--secondaryColor);
+}
+
+.btn-bx {
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    padding: 5px;
+    border: none;
+    margin: 0 1rem;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.btn-bx:hover {
+    background-color: var( --primaryColorLight);
+    color: var(--secondaryColor);
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--textColor);
+    border: none;
+    outline: none;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    header .btn {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    header nav {
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 3vh;
+        margin-left: -55.50vw;
+        gap: 1.5rem;
+        width: 100%;
+        background-color: #fa7046; 
+ 
+    }
+    
+    header .responsive_nav {
+        transform: none;
+    }
+
+    nav .close-btn {
+        position: absolute;
+        top: -2.4rem;
+        right: 2rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+}
